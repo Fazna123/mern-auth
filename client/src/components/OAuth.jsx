@@ -32,12 +32,12 @@ export default function OAuth() {
         }
     }
   return (
-    <div>
+    <div className='max-w-lg mx-auto'>
     
       <button
         type="button"
         onClick={handleGoogleClick}
-        className="bg-red-700 text-white p-3 rounded-lg uppercase hover:opacity-95"
+        className="bg-red-700 text-white p-3 rounded-lg uppercase hover:opacity-95 px-20"
       >
         Continue with google
       </button>
