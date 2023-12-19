@@ -2,7 +2,8 @@ import express from 'express';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import userRoutes from './routes/userRoute.js';
-import authRoutes from './routes/auth_route.js'
+import authRoutes from './routes/auth_route.js';
+import cookieParser from 'cookie-parser';
 dotenv.config();
 
 
@@ -17,6 +18,7 @@ const app = express();
 
 app.use(express.json());
 
+app.use(cookieParser());
 
 app.listen(3000, ()=>{
     console.log('Server Listening on http://localhost:3000')
