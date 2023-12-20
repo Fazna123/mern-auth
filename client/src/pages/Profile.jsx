@@ -10,7 +10,7 @@ import {
 import { app } from "../firebase";
 import { useDispatch } from "react-redux";
 import { updateUserSuccess, updateUserStart, updateUserFailure, deleteUserStart, deleteUserSuccess, deleteUserFailure, signOut } from "../redux/user/userSlice";
-
+import Header from '../components/Header';
 
 function Profile() {
   const dispatch = useDispatch();
@@ -108,7 +108,8 @@ function Profile() {
   };
 
   return (
-
+    <div>
+    <Header/>
     <div className="p-3 max-w-lg mx-auto">
       <h1 className="text-3xl font-semibold text-center my-7">Profile</h1>
       <form onSubmit={handleSubmit} className="flex flex-col gap-4">
@@ -167,6 +168,7 @@ function Profile() {
       </div>
       <p className="text-red-700 mt-5">{error && 'Something went wrong!'}</p>
       <p className="text-green-700 mt-5">{updateSuccess && 'User updated successfully!'}</p>
+    </div>
     </div>
   );
 }
